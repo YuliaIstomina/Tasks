@@ -1,7 +1,7 @@
 body{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
 }
 
 .header{
@@ -12,8 +12,10 @@ body{
 }
 
 .main{
+    display: grid;
     grid-row: 2/3;
     text-align: center;
+    justify-content: stretch;
     background-color: rgb(233, 204, 140);
 }
 
