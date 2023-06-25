@@ -1,179 +1,135 @@
-@media screen and (min-width: 600px){
-    .footer{
-        grid-area: footer;
-        justify-items: space-around;
-        width: 100%;
-        height: 5vh;
-        left: 0px;
-        top: 0px;
-        padding: 10px;
-        background: #E7EFF4;
-        }
-
-    .body{
+@media screen and (min-width: 1024px){
+    .container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 3fr;
+        justify-items: start;
+        text-align: start;
+        grid-template-areas: 
+        "H1 H1t H4 H4"
+        "H2 H2t H4 H4"
+        "H3 H3t H4t H4t"
+        "H5 H5 H5 H5";
+        gap: 1vh;
+        padding: 1vh;
+    }
+    .H1{
+        grid-area: H1;
+        padding: 1vh;
+        justify-self: end;
+    }
+    .H1t{
+        grid-area: H1t;
+        padding: 1vh;
+    }
+    .H2{
+        grid-area: H2;
+        padding: 1vh;
+        justify-self: end;
+    }
+    .H2t{
+        grid-area: H2t;
+        padding: 1vh;
+    }
+    .H3{
+        grid-area: H3;
+        padding: 1vh;
+        justify-self: end;
+    }
+    .H3t{
+        grid-area: H3t;
+        padding: 1vh;
+    }
+    .H4{
+        grid-area: H4;
+        padding: 1vh;
+        justify-self: center;
+    }
+    .H4t{
+        grid-area: H4t;
+        padding: 1vh;
+    }
+    .H5{
+        grid-area: H5;
+        justify-self: center;
         text-align: center;
-        grid-template-areas:
-        "header header header header header"
-        "cell1 cell1 cell1 cell1 cell6"
-        "cell2 cell2 cell2 cell2 cell6"
-        "cell3 cell3 cell4 cell4 cell6"
-        "cell5 cell5 cell5 cell5 cell6"
-        "port port port port port"
-        "footer footer footer footer footer";
-        background: linear-gradient(180deg, #F8F2FF 0%, rgba(250, 250, 250, 0) 100%);
-        backdrop-filter: blur(125px);
+        padding: 2vh;
+        margin: 2vh;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: start;
+        text-align: start;
+        gap: 1vh;
+        padding: 1vh;
     }
 }
-
-@media screen and (min-width: 400px) and (max-width: 599px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
     .footer{
         display: none;
     }
-
-    .body{
+    .container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        text-align: center;
-        grid-template-areas:
-        "header header header"
-        "cell1 cell1 cell6"
-        "cell2 cell2 cell6"
-        "cell3 cell4 cell6"
-        "cell5 cell5 cell6"
-        "port port port";
-        background: linear-gradient(180deg, #F8F2FF 0%, rgba(250, 250, 250, 0) 100%);
-        backdrop-filter: blur(125px);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        justify-items: start;
+        text-align: start;
+        grid-template-areas: 
+        "H1 H1t"
+        "H2 H2t"
+        "H3 H3t"
+        "H4 H4"
+        "H4t H4t"
+        "H5 H5";
+        gap: 1vh;
+        padding: 1vh;
+    }
+    .H1, .H2, .H3, .H4, .H5{
+        justify-self: center;
     }
 }
-
-@media screen and (max-width: 399px){
+@media screen and (max-width: 767px){
+    .container{
+        display: grid;
+        grid-template-rows: repeat(9, 1fr);
+        justify-items: center;
+        text-align: start;
+        grid-template-areas: 
+        "H1"
+        "H1t"
+        "H2"
+        "H2t"
+        "H3"
+        "H3t"
+        "H4"
+        "H4t"
+        "H5";
+        padding: 1vh;
+    }
     .footer{
         display: none;
     }
 }
-
+img{
+    max-width: 100%;
+}
 .header{
-    grid-area: header;
+    text-align: center;
 }
-.BIO{
-    grid-area: bio;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2em;
-    line-height: 2em;
-}
-
-.now_available{
-    grid-area: now;
-    padding: 1% 4%;
-    width: 11%;
-    height: 3%;
-    background: #F5EDFF;
-    border-radius: 179.467px;
-    font-style: normal;
+.losung{
+    color: var(--yellow-500, #F59E0B);
+    text-align: center;
+    font-size: 1em;
+    font-family: Lexend;
     font-weight: 500;
-    font-size: 1em;
-    line-height: 10%;
-    color: #AF48FF;
+    text-transform: capitalize;
 }
-
-.navigation_sm1{
-    grid-area: nav1;
-    cursor: pointer;
-}
-
-.main_text{
-    gap: 10px;
-    justify-content: center;
-    align-content: center;
-}
-
-.cell_1{
-    grid-area: cell1;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1em;
-    line-height: 10%;
-    letter-spacing: -0.04em;
-    color: #25323D;
-}
-
-.cell_2{
-    grid-area: cell2;
-    color: #5D87A8;
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-}
-
-.cell_3{
-    grid-area: cell3;
-    color: #5D87A8;
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-}
-
-.talent{
-    color:#AF48FF;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.cell_4{
-    grid-area: cell4;
-    color: #5D87A8;
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-}
-
-.email{
-    color:#AF48FF;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.cell_5{
-    grid-area: cell5;
-    color: #5D87A8;
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-}
-
-.cell_6{
-    grid-area: cell6;
-    justify-items: center;
-    align-items: center;
-}
-
-.portf{
-    grid-area: port;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-}
-
-.portfolio{
-    background: #FFFFFF;
-    box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
-    border-radius: 6px;
+.infohead{
+    color: var(--mrt-app-headline, #1B1C57);
+    text-align: center;
+    font-size: 2em;
+    font-family: Lexend;
+    font-weight: 600;
+    text-transform: capitalize;
 }
